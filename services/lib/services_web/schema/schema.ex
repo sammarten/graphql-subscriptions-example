@@ -29,7 +29,7 @@ defmodule ServicesWeb.Schema do
   end
 
   subscription do
-    field :notification_received, :notification do
+    field :notification_received, non_null(:notification) do
       arg(:channel, non_null(:string))
 
       config(fn args, _ ->
